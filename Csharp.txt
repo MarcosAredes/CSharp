@@ -1,61 +1,74 @@
-1.0 Fundamentals C#:
-[ 
-   - 1.1 .NET/ DotNET
-   - 1.2 IDEs
-   - 1.3 Sintaxe
-   - 1.4 Tipos de Dados
-   - 1.5 Tipos de operadores
-   - 1.6 Operadores Aritméticos
-   - 1.7 Estrutura de repetição
-   - 1.8 Organização de um programa C#
-   - 1.9 Array e lista
-] 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.0 Tipos de arquivos base em C#:
+
+   Ao contrário de certas linguagens o C# precisa de um código base
+   para se programar.
+   
+   O codigo necessita de pertencer a uma classe, e possui um método Main.
+   Mesmo assim o código inicial que é necessário varia de acordo com a sua implementação.
 
 
-1.1 .NET/DotNET:
+         using System; //NameSpace ou Módulo System
+         
+         class Principal{
+            static void Main()//Metodo{
 
-   O .NET Framework é um ambiente de tempo de execução desenvolvido pela Microsoft para executar aplicativos .NET.
-   Ele fornece uma ampla biblioteca de classes e suporte para várias linguagens de programação, incluindo C#.
+               //Aqui escreve o codigo dentro das chaves
+               
+            }
+         }
 
-1.2 IDEs:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   IDEs (Ambiente de Desenvolvimento Integrado) são ferramentas que fornecem um conjunto de recursos para desenvolvimento de software, incluindo edição de código, compilação, depuração e execução de programas.
-   Exemplos de IDEs populares para desenvolvimento C# incluem Visual Studio e Visual Studio Code.
+2.0 Estrutura de um projeto:
 
-1.3 Sintaxe:
+   Todos os projetos em C# trabalhandos no VScode possuem em 
+   geral certas características em comum.
 
-   A sintaxe em C# define como o código deve ser escrito para que o compilador possa entender e traduzir para instruções de máquina.
-   Isso inclui regras para declaração de variáveis, estruturas de controle de fluxo, declaração de funções, etc.
+   Pasta(Nome:basic)
+     |-----> index.cs (.Cs = Csharp ou C#)
+               |-----> index.exe (E o arquivo ".cs" compilado 
+                                                para executável)
 
-1.4 Tipos de Dados:
+   Dentro do Arquivo.cs você programa/cria o seu código
+   Dentro do Arquivo.exe você ver o programa (executa o código)
 
-   C# suporta uma variedade de tipos de dados, incluindo inteiros, decimais, booleanos, caracteres, cadeias de caracteres, etc.
-   Cada tipo de dados tem um tamanho específico em bytes e um conjunto de valores que pode representar.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1.5 Tipos de Operadores:
+3.0 Execução pelo Terminal e VScode:
 
-   Os operadores em C# são símbolos que realizam operações em operandos.
-   Isso inclui operadores aritméticos, relacionais, lógicos, de atribuição, etc.
+   O terminal do windows e o terminal existente no VScode e o mesmo.
+   Dessa maneira pode ser utilizado para executar o código.
 
-1.6 Operadores Aritméticos:
+   Ao utilizar o terminal é necessário a compilação é depois a execução
 
-   Os operadores aritméticos em C# são usados para realizar operações matemáticas em operandos numéricos.
-   Exemplos incluem adição (+), subtração (-), multiplicação (*), divisão (/), etc.
 
-1.7 Estrutura de Repetição:
+      PS C:\Users\Doc\C-> cd basic
+      PS C:\Users\Doc\C-\basic> dir
 
-   As estruturas de repetição em C# permitem que você execute um bloco de código repetidamente enquanto uma condição específica for verdadeira.
-   Os loops mais comuns são o "for", o "while" e o "do-while".
 
-1.8 Organização de um Programa C#:
+         Diretório: C:\Users\Doc\C-\basic
 
-   Um programa C# geralmente consiste em um ou mais arquivos de código-fonte que contêm classes, métodos e outras estruturas.
-   A estrutura do programa geralmente segue uma hierarquia de namespaces, classes e membros.
 
-1.9 Array e Lista:
+      Mode                 LastWriteTime         Length Name
+      ----                 -------------         ------ ----
+      -a----        07/05/2024     15:23            186 index.cs
+      -a----        02/05/2024     23:40           3584 index.exe
 
-   Arrays e listas são estruturas de dados usadas para armazenar coleções de elementos em C#.
-   Arrays têm um tamanho fixo, enquanto listas podem crescer dinamicamente à medida que novos elementos são adicionados.
 
-    
+      PS C:\Users\Doc\C-\basic> ./index
 
+      Hello World!
+
+      cd = Permite navegar entre diretórios no sistema de arquivos. Por exemplo, "cd C:\Pasta"
+      dir = Permite você ver o que está dentro do diretório
+      ./ = e dentro dela existirem os arquivos "index.cs" e "index.exe", ao digitar "./index" no terminal, ele tentará executar o arquivo "index" que estiver marcado como executável.
+            
+            "No entanto, se ambos "index.cs" e "index.exe" existirem e estiverem 
+            marcados como executáveis, é importante saber que o sistema dará preferência 
+            para o tipo de arquivo que ele consegue executar diretamente. Por exemplo, se 
+            "index.exe" for um executável Windows e "index.cs" for um arquivo de código fonte C#, 
+            o sistema pode executar "index.exe" mesmo se você digitar "./index"."
+
+   
