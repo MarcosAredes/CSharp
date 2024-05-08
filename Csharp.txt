@@ -66,7 +66,7 @@
 
       cd = Permite navegar entre diretórios no sistema de arquivos. Por exemplo, "cd C:\Pasta"
       dir = Permite você ver o que está dentro do diretório
-      ./ = e dentro dela existirem os arquivos "index.cs" e "index.exe", ao digitar "./index" no terminal, ele tentará executar o arquivo "index" que estiver marcado como executável.
+      .\ = e dentro dela existirem os arquivos "index.cs" e "index.exe", ao digitar "./index" no terminal, ele tentará executar o arquivo "index" que estiver marcado como executável.
             
             "No entanto, se ambos "index.cs" e "index.exe" existirem e estiverem 
             marcados como executáveis, é importante saber que o sistema dará preferência 
@@ -79,3 +79,54 @@
 
 4.0 Fundamentos do C#:
 
+   SEMPRE COLOCAR O ";" 
+   Conceitos básicos do C# como Saídas, Entradas, Dados, Conversões, ...
+
+
+4.1 Saidas(Output) Write e WriteLine:
+   É chamado de saída todos os dados que são mostrados no terminal. 
+      Para um código C# executar a saída de um dado existem duas funções para isso:
+      ° WriteLine() 
+      ° Write() 
+      Em outras linguagens ex:Python seria o print("hello world")
+
+      --------------------------------------
+      Console.Write("Olá, Mundo!")
+      
+      Console = É uma classe que representa a entrada e saída padrão do 
+      console no sistema operacional. Permite interagir com o console, 
+      escrevendo ou lendo dados.
+
+      Write=  É um método da classe Console que escreve texto no console.
+      
+      --------------------------------------------
+      
+      Console.WriteLine("Olá, mundo");
+
+      E a mesma coisa do Console.Write mas tem quebra de linha
+      sendo A mensagem dentro das aspas e vai para linha de baixo
+        
+         Console.WriteLine("Olá, mundo");
+         Console.Write("Voltemos!"); 
+
+         resposta: 
+            Olá, mundo
+            Voltemos!
+
+      ---------------------------------------------
+
+4.1.1  Formatação de saída:    
+
+   É possível alterara a maneira como um texto é mostrado no terminal utilizando
+   os escape sequence.
+
+   Os escape sequence são pequenos comandos colocados dentro da string
+   que irão alterar a string no ponto onde são colocados.
+
+      Console.Write("Hello, "\t" World!");
+
+      resposta = Hello,   World!
+
+       
+       Mais Sobre Formatação de Saídas (E complicado de entender)
+      https://pt.stackoverflow.com/questions/116497/car%C3%A1cteres-de-escape#:~:text=Sequ%C3%AAncias%20de%20escape%20em%20ASCII,para%20o%20outro%2C%20por%20exemplo.&text=Sequ%C3%AAncia%20de%20escape%20%C3%A9%20uma,ou%20seja%2C%20sequ%C3%AAncia%20de%20escape.&text=Espero%20ter%20ajudado.
