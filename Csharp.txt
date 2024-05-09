@@ -129,4 +129,74 @@
 
        
        Mais Sobre Formatação de Saídas (E complicado de entender)
-      https://pt.stackoverflow.com/questions/116497/car%C3%A1cteres-de-escape#:~:text=Sequ%C3%AAncias%20de%20escape%20em%20ASCII,para%20o%20outro%2C%20por%20exemplo.&text=Sequ%C3%AAncia%20de%20escape%20%C3%A9%20uma,ou%20seja%2C%20sequ%C3%AAncia%20de%20escape.&text=Espero%20ter%20ajudado.
+       https://pt.stackoverflow.com/questions/116497/car%C3%A1cteres-de-escape#:~:text=Sequ%C3%AAncias%20de%20escape%20em%20ASCII,para%20o%20outro%2C%20por%20exemplo.&text=Sequ%C3%AAncia%20de%20escape%20%C3%A9%20uma,ou%20seja%2C%20sequ%C3%AAncia%20de%20escape.&text=Espero%20ter%20ajudado.
+       https://learn.microsoft.com/en-us/cpp/c-language/escape-sequences?view=msvc-170
+   
+         ----------------------------------------------
+
+4.2 Variáveis e Tipos de dados
+
+   Doc:
+   https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types
+   https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types
+
+   Na programação são utilizados diversos tipos de valores,
+   valores ficam guardados numa posição da memória.
+
+   Cada valor que é trabalhado em C# pode ficar guardado em numa variável.
+
+   Declaração de Variáveis
+
+   tipo nome = valor
+
+      tipo =  Os tipos de Variáveis são divididos em "cinco" tipos
+
+         1° Tipos Numéricos Integrais:
+
+            - int : Inteiro de 32 bits com sinal. Ex: "int idade = 25;"
+            - long : inteiro de 64 bits com sinal Ex: "long populacao = 7896541230;"
+            - short : Inteiro de 16 bits com sinal. Ex: "short temperatura = -10;"
+            - byte : Inteiro de 8 bits sem sinal. Ex: "byte niveisDeCinza = 128;"
+
+         2° Tipos Numéricos de Ponto Flutuante:
+
+            -  float : Número de ponto flutuante de precisão simples. Ex: "float altura = 1.75f;"  
+            -  double : Número de ponto flutuante de precisão dupla. Ex: "double pi =3;14159265359;"
+            -  decimal : Número decimal de alta precisão. Ex: "decimal preco = 19.99m;"
+
+         3° Tipos Booleano:
+
+            - bool: Armazena um único caractere Unicode. Ex: "bool estachovendo = true; "
+
+         4° Tipo Caractere:
+
+            - char : Armazena um único caractere Unicode. Ex: "char letras = 'A'; "
+         
+         5° Tipo String: 
+
+            - string : Sequência de caractere Unicode. Ex: "string nome = "Maria" ; "
+
+         Ex:
+
+            tipoDaVariavel nomeDaVariavel = valorInicial;
+
+            #######################
+
+            int idade = 30;
+            string nome = "João";
+            bool estaChovendo = false;
+
+            #########################
+
+            string var1 = "Hello, World";
+            Console.WriteLine(var1);
+
+            ###########################
+
+            
+
+
+            
+
+
+
