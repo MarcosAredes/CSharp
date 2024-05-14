@@ -73,7 +73,7 @@
             para o tipo de arquivo que ele consegue executar diretamente. Por exemplo, se 
             "index.exe" for um executável Windows e "index.cs" for um arquivo de código fonte C#, 
             o sistema pode executar "index.exe" mesmo se você digitar "./index"."
-
+      cd.. =  caso queira voltar de diretorio 
    
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -193,10 +193,128 @@
 
             ###########################
 
+4.3 Leitura Sequencial 
             
+   Todos os programas possuem uma ordem padrão de execução das instruções
+   Na programação a leitura padrão de um código é a sequencial. 
+      Ex:
+         Intrução1 -> Intrução2 -> Intrução3  
+
+         using System;
+
+         class Program{
+            static void Main(){
+               //Leitura Sequencial
+
+               Console.WriteLine("Olha, mund") //Intrução1
+               Console.WriteLine("Outra coisa") //Intrução2
+               Console.WriteLine("Mais bosta") //Intrução3
+
+            }
+         }
+
+         resultado:
+         Olha, mund
+         Outra coisa
+         Mais bosta
+
+      ----------------------------------------------------
+
+         using System;
+
+         class Program{
+            static void Main(){
+            //Leitura Sequencial
+
+               Console.WriteLine(num) //Ele não vai ler a variavel pois não existe nas linhas a cima dele
+               int num =20;// essa variável deveria está a cima do "Console.WriteLine()" para seguir uma sequência
+
+            }
+         }
+
+      resultado:
+         error CS0841: Não é possível usar a variável local 'num' antes de declará-la
 
 
-            
+      --------------------------------------------------------------------------------------
 
+4.4 Operadores Aritméticos:            
 
+   Na programação são utilizado diversos simbolos para diversas coisas.
+   Os operadores aritméticos são todos os operadores que nos auxiliam na execução de expressões aritméticas.
+
+      Ex: +, -, /, ++, --, %
+
+      Adição (+), Subtração (-), Multiplicação (*),
+      Divisão (/), Módulo (%), Incremento (++), Decremento (--)
+
+      ex:
+
+         using System;
+
+         class Program
+         {
+            static void Main(string[] args)
+            {
+                  int a = 10;
+                  int b = 3;
+                  
+                  int soma = a + b;
+                  int subtracao = a - b;
+                  int multiplicacao = a * b;
+                  int divisao = a / b;
+                  int modulo = a % b;
+
+                  Console.WriteLine("Soma: " + soma);             // Saída: 13
+                  Console.WriteLine("Subtração: " + subtracao);   // Saída: 7
+                  Console.WriteLine("Multiplicação: " + multiplicacao); // Saída: 30
+                  Console.WriteLine("Divisão: " + divisao);       // Saída: 3
+                  Console.WriteLine("Módulo: " + modulo);         // Saída: 1
+
+                  a++; // Incremento
+                  b--; // Decremento
+
+                  Console.WriteLine("Incremento de a: " + a);     // Saída: 11
+                  Console.WriteLine("Decremento de b: " + b);     // Saída: 2
+            }
+         }
+
+   Resultado:
+
+         Soma: 13
+         Subtração: 7
+         Multiplicação: 30
+         Divisão: 3
+         Módulo: 1
+         Incremento de a: 11
+         Decremento de b: 2
+
+      -------------------------------------------------------------------------------------------------
+
+4.5 Obtendo Entradas de Usuario: 
+   Como visto um programa é um conjunto de saida e entradas de dados.
+   É possivél também ler e obter uma entrada do usuario que está a executar o programa.
+
+      Input -> Algoritimo -> Output
+
+   Em C#, você pode obter entradas do usuário usando o método "Console.ReadLine()", 
+   que lê uma linha de entrada do console como uma string. Em seguida, você pode converter 
+   essa string para o tipo de dado desejado, como int, double, entre outros.
+
+   using System;
+
+   class Program{
+      static void Main(){
+         Console.WriteLine("Digite Algo:");
+         Console.ReadLine();
+      }
+  }
+
+   Resultado
+   Digite Algo:
+   Algo
+   
+   ------------------------------------------------------------------------
+
+4.6 Conversão de Tipos de Dados:
 
