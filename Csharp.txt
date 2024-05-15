@@ -318,3 +318,69 @@
 
 4.6 Conversão de Tipos de Dados:
 
+   Todas as entradas obtidas pelo usuário são do tipo string.
+   Em C# é possível converter o tipo de dado através de dois tipos de conversões:
+
+      ° Conversões Implicitas
+      ° Conversões Explicitas 
+
+      Dados do maior para menor Ex:
+         double > float > long > int > char 
+      
+      ° Conversões Implicitas:
+         Se a conversão for de um tipo menor para maior.
+            Ex: int > long
+         
+      ° Conversões Explicitas:
+         Se a conversão é de um tipo Maior para menor.
+            Ex: double > int 
+         Vai usar o TypeCast, typecasting em C# é uma prática comum e importante para a 
+         manipulação de dados e integração de diferentes tipos de 
+         dados em seu código. Entender quando e como usar conversões 
+         implícitas e explícitas pode ajudar a prevenir erros e 
+         melhorar a eficiência do código.
+
+            A expecificação do tipo de dado entre parentes (int)
+
+         Ex:
+            using System; 
+
+            class Program{
+               static void Main(){
+                  //double > float > long > int > char
+
+                  //Implicita -> do menor para maior
+
+                        int num1 = 20;
+                        float num2 = num1;
+                        Console.WriteLine(num2);
+                        
+                  //Explicita -> do maior para menor
+
+                        float n1 = 20.5f;
+                        int n2 = (int)n1; //TypeCast
+                        Console.WriteLine(n2);
+               }
+            }
+            
+
+   --------------------------------------------------------------------------------------------------
+
+4.6.1 Metódos para Conversão:
+   https://learn.microsoft.com/en-us/dotnet/api/system.convert?view=net-8.0
+      using System;
+
+      class Program{
+         static void Main(){
+            //Metodos para Conversão
+            
+            string t1 = "3";
+            int n1 = Convert.ToInt32(t1);
+            Console.WriteLine(t1);
+            Console.WriteLine(n1);
+         }
+      }
+   
+      
+
+
