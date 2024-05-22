@@ -84,6 +84,7 @@
 
 
 4.1 Saidas(Output) Write e WriteLine:
+   
    É chamado de saída todos os dados que são mostrados no terminal. 
       Para um código C# executar a saída de um dado existem duas funções para isso:
       ° WriteLine() 
@@ -381,6 +382,201 @@
          }
       }
    
+4.7 Constantes
+   
+   Constantes são um tipo de dado q não pode ser alterado.
+   Ou seja um tipo de dado que será sempre o mesmo durante todo programa,
+   permanecendo o seu tipo e valor. 
+
+   ex:
+
+      int n1 = 20; ainda não e uma constante pos falta o "const"
+
+      const int n1 = 20; agora já virou um valor constante 
+
+      agora já não posso dizer que n1 = 10; pois vai dar um erro 
+      "constantes.cs(8,16): error CS1002: ; esperado"
+
+4.8 Tratamento de Strings
+
+   Na programação strings podem ser alteradas de diversas formas.
+
+   Essa alterações podem ser, por exemplo deixar tudo em maíusculas, substituir,
+   uma parte da string, cortar uma parte, etc.
+
+   1. Declaração e Inicialização de Strings
+
+      string mensagem = "Olá, Mundo!";
+      string vazio = string.Empty; // ou ""  
+   
+   2. Concatenação
+
+      string parte1 = "Olá, ";
+      string parte2 = "Mundo!";
+      string resultado = parte1 + parte2;
+
+      // Outra maneira usando String.Concat
+      string resultado2 = string.Concat(parte1, parte2);
+   
+   3. Interpolação de Strings
+
+      string nome = "João";
+      int idade = 25;
+      string mensagem = $"Meu nome é {nome} e eu tenho {idade} anos.";
+
+   4. Formatação de Strings
+
+      string mensagem = string.Format("Meu nome é {0} e eu tenho {1} anos.", nome, idade);
+
+   5. Métodos de Manipulação
+
+      ° ToUpper e ToLower: Converte a string para maiúsculas ou minúsculas.
       
+         string upper = mensagem.ToUpper();
+         string lower = mensagem.ToLower();
+
+      ° Trim, TrimStart e TrimEnd: Remove espaços em branco no início e/ou fim da string.
+
+         string texto = "  Olá, Mundo!  ";
+         string textoTrimmed = texto.Trim();
+         string textoTrimmedStart = texto.TrimStart();
+         string textoTrimmedEnd = texto.TrimEnd();
+      
+      ° Replace: Substitui parte da string por outra.
+
+         string novaMensagem = mensagem.Replace("João", "Maria");
+
+   6. Busca em Strings 
+      
+      ° Contains: Verifica se uma substring está presente.
+
+         bool contem = mensagem.Contains("nome");
+
+      ° IndexOf: Encontra o índice da primeira ocorrência de uma substring.
+
+         int indice = mensagem.IndexOf("nome");
+
+      ° LastIndexOf: Encontra o índice da última ocorrência de uma substring.
+
+         int ultimoIndice = mensagem.LastIndexOf("nome");
+
+   7. Divisão de Strings
+
+      ° Split: Divide uma string em um array de substrings com base em um delimitador.
+
+         string data = "21/05/2024";
+         string[] partes = data.Split('/');
+
+   8. Junção de Strings
+
+      ° Join: Junta elementos de um array de strings em uma única string com um delimitador.
+
+         string[] palavras = { "Olá", "Mundo" };
+         string frase = string.Join(" ", palavras);
+
+   9. Comparação de Strings
+
+      ° Equals: Compara duas strings.
+
+         bool saoIguais = mensagem.Equals("Meu nome é João e eu tenho 25 anos.");
+
+      ° Compare: Compara duas strings e retorna um valor indicando a relação de ordem.
+
+         int comparacao = string.Compare("a", "b"); // Retorna -1, 0 ou 1
+
+   10. Strings Imutáveis
+
+         Em C#, as strings são imutáveis, o que significa que qualquer operação que modifica 
+         uma string cria uma nova instância da string. Para operações intensivas de 
+         concatenação, é recomendável usar a classe 'StringBuilder'.
+   
+   11. StringBuilder
+
+      Para manipulações intensivas de strings, use StringBuilder para melhorar a performance:
+
+         using System.Text;
+
+         StringBuilder sb = new StringBuilder();
+         sb.Append("Olá");
+         sb.Append(", ");
+         sb.Append("Mundo!");
+
+         string resultado = sb.ToString();
+
+5.0 Classe Math
+
+   Uma classe é um conjunto de metodos e valore.
+   C# possui uma class padrão chamada Math que possui 
+   diversas funções para matemática.
+
+   Explicação dos Métodos Usados:
+
+      1. Math.Abs(int value):
+         
+         °  Retorna o valor absoluto de um número.
+
+            int valorNegativo = -10;
+            int valorAbsoluto = Math.Abs(valorNegativo);
+      
+      2. Math.Pow(double x, double y):
+         
+         °  Retorna x elevado à potência y.  
+         
+            double potencia = Math.Pow(2, 3); // 2^3 = 8
+      
+      3. Math.Sqrt(double d):
+
+         °  Retorna a raiz quadrada de um número.
+
+            double raizQuadrada = Math.Sqrt(16); // 4
+
+      4. Math.Sin(double a), Math.Cos(double a):
+
+         °  Retorna o seno e o cosseno do ângulo fornecido em radianos.
+
+            double seno = Math.Sin(Math.PI / 4); // Seno de 45 graus
+            double cosseno = Math.Cos(Math.PI / 4); // Cosseno de 45 graus
+
+      5. Math.Round(double value):
+
+         °  Arredonda um número para o inteiro mais próximo.
+
+            double arredondado = Math.Round(5.65); // 6
+
+      6. Math.Ceiling(double a):
+
+         °  Arredonda um número para cima, para o próximo inteiro maior ou igual.
+
+            double arredondadoParaCima = Math.Ceiling(5.3); // 6
+
+      7. Math.Floor(double a):
+
+         °  Arredonda um número para baixo, para o próximo inteiro menor ou igual.
+         
+            double arredondadoParaBaixo = Math.Floor(5.7); // 5
+
+      8. Math.Max(int a, int b), Math.Min(int a, int b):
+
+         ° Retorna o maior ou menor valor entre dois números.
+
+            int maximo = Math.Max(10, 20); // 20
+            int minimo = Math.Min(10, 20); // 10
+      
+      9. Constantes:
+         
+         °  Math.PI: Representa o valor de pi (π).
+        
+         °  Math.E: Representa o valor de e (base do logaritmo natural).
+            
+            double pi = Math.PI; // 3.141592653589793
+            double e = Math.E;   // 2.718281828459045
+
+   A classe Math é uma ferramenta poderosa para realizar cálculos matemáticos 
+   em C#, simplificando muitas operações complexas com seus métodos estáticos.
+
+-------------------------------------------------------------------------------------------------------------------
+
+Estrutura de Controle: Condicionais e Seleção
+
 
 
