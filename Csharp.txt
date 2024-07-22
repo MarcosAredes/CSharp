@@ -578,5 +578,22 @@
 
 Estrutura de Controle: Condicionais e Seleção
 
+Estrutura de Controle:
 
+   Um código pode ser constituído por diversas estruturas. Por padrão um código é baseado
+   numa estrutura sequencial, ou seja o seu fluxo padrão.
 
+   É possível alterar esse fluxo através de estruturas de controle.
+
+           |->    Sequencial
+   Código -|
+           |->    Estrutura de  -> Condicional
+                  Controle         Seleção
+                                   Repetição 
+
+Estruturas Condicionais 
+
+   Um código não é inteiramente sequencial envolve outra estrutura.
+   Essa outra estrutura muda o fluxo do código com base no necessitado.
+   Estruturas de decisão/condicionais/decisivas permitem tomar rumos diferentes do que irá acontecer.
+    
