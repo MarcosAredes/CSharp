@@ -591,9 +591,47 @@ Estrutura de Controle:
                   Controle         Seleção
                                    Repetição 
 
-Estruturas Condicionais 
+Estruturas Condicionais: 
 
    Um código não é inteiramente sequencial envolve outra estrutura.
    Essa outra estrutura muda o fluxo do código com base no necessitado.
    Estruturas de decisão/condicionais/decisivas permitem tomar rumos diferentes do que irá acontecer.
-    
+
+                            |-> Intrução x
+      Intrução x -> Decisão |
+                            |-> Instrução y
+
+   
+   Ex: 
+   Qual sua idade?
+               |-> Se idade for maior de 18 o codigo libera o acesso!
+               |-> Se a idade for menor que 18 o codigo não libera!
+               |-> Ou If or Else 
+
+   A decisão é formada pelo teste lógico. Teste lógico e nome dado a expressão 
+   lógica/relacional presente numa estrutura condicional 
+
+Operadores Relacionais:
+
+   Para formar diferentes expressões existem diferentes operadores.
+
+   Os operadores relacionais permitem formar expressões relacionais, que 
+   relacionam 2 valores dando como resultado um valor booleano.
+
+   Valores booleanos:
+
+      bool value = true;
+      bool value2 = false;
+
+      Variáveis q apenas possuem 2 estados, verdadeiro ou falso 
+   
+      == -> Se refere ao Igual '='
+      != -> Se refere ao diferente 
+      < -> menor que
+      > -> maior que
+      <= -> igual ou menor que
+      >= -> igual ou maior que 
+
+Operadores Lógicos:
+
+   
